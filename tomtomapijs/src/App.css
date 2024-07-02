@@ -1,0 +1,75 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden; /* Hide overflow to prevent scrolling */
+}
+
+.search-container {
+  display: flex;
+  position: absolute;
+  top: 20px;
+  left: 25px;
+  width: 400px;
+  z-index: 1000; /* Ensure search bar is above map */
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.results-container {
+  position: absolute;
+  width: 100%;
+  top: 5%;
+  max-width: 400px; /* Adjust as needed */
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 25px;
+  overflow-y: auto;
+  max-height: calc(100vh - 200px); /* Adjust based on other heights */
+}
+
+.result-item {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+
+.result-item:last-child {
+  border-bottom: none;
+}
+
+.result-item:hover {
+  background-color: #f0f0f0;
+}
+
+.mapDiv {
+  flex: 1; /* Take remaining space */
+}
+
+
+
+input[type="text"] {
+  padding: 10px;
+  width: calc(100% - 20px); /* Adjust button width */
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  justify-content: center;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
